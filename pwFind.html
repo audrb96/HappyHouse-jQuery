@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <title>Happy House | 회원 가입</title>
+</head>
+
+<body>
+    <div class="header-top">
+        <div class="button-group">
+            <button type="button" class="btn btn-dark" id="signUp-btn">Sign up</button>
+            <button type="button" class="btn btn-dark" id="login-btn">Login</button>
+            <button type="button" class="btn btn-dark" id="logout-btn" style="display: none;">Logout</button>
+            <button type="button" class="btn btn-dark" id="user-info" style="display: none;">회원 정보</button>
+        </div>
+    </div>
+    <div id="Pop"
+        style="position:absolute; right:0; width:300px; height:300px; background-color: black; color: white; display: none;">
+        <div style="margin-top: 20px; margin-left: 15px;">
+            아이디
+        </div>
+        <input class="form-control form-control-lg" id="login-id" type="text" placeholder="아이디"
+            aria-label=".form-control-lg example"
+            style="margin-top: 10px;margin-left: 15px; margin-right: 15px;width: 280px;">
+        <div style="margin-top: 20px; margin-left: 15px;">
+            비밀번호
+        </div>
+        <input class="form-control form-control-lg" id="login-password" type="text" placeholder="비밀번호"
+            aria-label=".form-control-lg example"
+            style="margin-top: 10px;margin-left: 15px; margin-right: 15px;width: 280px;">
+        <button type="button" class="btn btn-light" id="inner-login-btn" style="margin-left: 15px;">로그인</button>
+        <a href="pwFind.html"><button type="button" class="btn btn-dark">비밀번호 찾기</button></a>
+    </div>
+
+    <div class="header-container">
+        <div class="header">
+            <a href="index.html"><img src="img/logo.jpg" width="200px" /></a>
+
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a href="#">공지사항</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">오늘의 뉴스</a>
+                </li>
+                <li id="find-around" class="nav-item" style="display: none">
+                    <a>주변 탐방</a>
+                </li>
+                <li id="interested-region" class="nav-item" style="display: none">
+                    <a>관심 지역 설정</a>
+                </li>
+                <li id="interested-around" class="nav-item" style="display: none">
+                    <a>관심 지역 둘러보기</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner" style="
+        background-image: url('http://happyhouse.jaen.kr/images/mainbg1.jpg');
+        background-position: 50% 32%;
+      ">
+        <div class="banner-text">
+            <h2 class="happyhouse">Happy House</h2>
+            <hr style="color: white" />
+            <!-- <div class="separator hc-element-invisible mt-10 animated hc-element-visible fadeIn" data-animation-effect="fadeIn" data-effect-delay="100"></div> -->
+            <div style="color: white">행복한 우리집</div>
+        </div>
+    </div>
+    <div class="signup-container">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li>&nbsp;> 비밀번호 찾기</a></li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="main-container dark-translucent-bg"
+        style="background-image: url('http://happyhouse.jaen.kr/images/background-img-6.jpg');">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="main hc-element-invisible" data-animation-effect="fadeInUpSmall" data-effect-delay="100"
+                        style="color: black;">
+                        <div class="form-block p-30 light-gray-bg border-clear">
+                            <h2 class="title" id="signup-title" style="color: gray;">비밀번호 찾기</h2>
+
+                            <form class="form-horizontal">
+                                <div class="form-group has-feedback row">
+                                    <label for="inputUserName"
+                                        class="col-md-3 control-label text-md-right col-form-label">이름
+                                        <span class="text-danger small">*</span>
+                                    </label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="inputUserName"
+                                            placeholder="User Name" required name="name" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group has-feedback row">
+                                    <label for="inputId" class="col-md-3 control-label text-md-right col-form-label">아이디
+                                        <span class="text-danger small">*</span>
+                                    </label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="inputId" placeholder="" required
+                                            name="id" />
+                                    </div>
+                                </div>
+                                <div class="form-group has-feedback row">
+                                    <label for="inputColNum"
+                                        class="col-md-3 control-label text-md-right col-form-label">전화번호
+                                        <span class="text-danger small">*</span>
+                                    </label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="inputColNum"
+                                            placeholder="010-xxx-xxxx" required name="tel" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="ml-md-auto col-md-9">
+                                        <button type="button" id="sign-button" onclick="findPw();"
+                                            class="btn btn-group btn-warning btn-animated">비밀번호 찾기</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="main-footer">
+            <div class="main-footer-container">
+                <img src="http://happyhouse.jaen.kr/images/logo.png" width="80px" height="60px">
+                <div class="main-footer-context">
+                    <div style="font-size: 25px;">Find US</div>
+                    <hr>
+                    <div class="address">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="aqua"
+                                style="margin-right: 10px;" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                            </svg>
+                            (SSAFY)서울시 강남구 테헤란로 멀티스퀘어
+                        </div>
+                        <div style="display: flex; margin-top: 10px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="aqua"
+                                style="margin-right: 10px;" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>
+                            1544-9001
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="aqua"
+                                style="margin-right: 10px;" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                            </svg>
+                            admin@ssafy.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer">
+            Copyright by SSAFY. All rights reserved.
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
