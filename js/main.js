@@ -90,7 +90,7 @@ $(() => {
     //끝
 
     var ServiceKey =
-      "suEl2XqtRg8fCmePwg203yb3PfeP26VcV7PMusAwhf95sNOkiUGRSncuwiUxCjn8ToHYpwksB3GrU8RFQe6mug==";
+      "//";
     var pageNo = "1";
     var numOfRows = "30";
     var LAWD_CD = e.target.name.substring(0, 5);
@@ -136,7 +136,7 @@ $(() => {
         $.get(
           "https://maps.googleapis.com/maps/api/geocode/json",
           {
-            key: "AIzaSyC0-HJ8XQXXWU52TxrGLViCHP8o1plZhmo",
+            key: "//",
             address: `${$("#dropdownMenuButton1").text().trim()}+${$("#dropdownMenuButton2").text().trim()}+${e.target.text.trim()}`,
           },
           function (data, status) {        
@@ -154,7 +154,7 @@ $(() => {
                     $.get(
                       "https://maps.googleapis.com/maps/api/geocode/json",
                       {
-                        key: "AIzaSyC0-HJ8XQXXWU52TxrGLViCHP8o1plZhmo",
+                        key: "//",
                         address: `${$("#dropdownMenuButton1").text().trim()}+${$("#dropdownMenuButton2").text().trim()}+${e.target.text.trim()}+${item}`,
                       },
                       function(data,status){
@@ -268,7 +268,7 @@ $(() => {
   $(document).on("click", ".apt-name", (e) => {
     let aptName = e.target.innerText;
     var ServiceKey =
-      "suEl2XqtRg8fCmePwg203yb3PfeP26VcV7PMusAwhf95sNOkiUGRSncuwiUxCjn8ToHYpwksB3GrU8RFQe6mug==";
+      "//";
     var pageNo = "1";
     var numOfRows = "30";
     var LAWD_CD = e.target.getAttribute("name");
@@ -319,7 +319,7 @@ $(() => {
             $.get(
               "https://maps.googleapis.com/maps/api/geocode/json",
               {
-                key: "AIzaSyC0-HJ8XQXXWU52TxrGLViCHP8o1plZhmo",
+                key: "//",
                 address: `${$("#dropdownMenuButton1").text().trim()}+${$("#dropdownMenuButton2").text().trim()}+${$("#dropdownMenuButton3").text()}+${item}`,
               },
               function(data,status){
